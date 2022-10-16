@@ -31,6 +31,15 @@ github_username:  yfge
 theme: minima
 plugins:
   - jekyll-feed
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default.
