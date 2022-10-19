@@ -241,13 +241,13 @@ sudo mv   /Library/Ruby/Gems/2.6.0/gems/minima-2.5.1/_includes/header.html ./_in
 具体方式：
 1. 先直接把tag目录干掉&commit
 2. 进入项目的`Action` 页面，选择`New Workflow`
-![image](../assets/jpeg/871666167187_.pic.jpg)
+![image](/assets/jpeg/871666167187_.pic.jpg)
 3. 进入页面后，搜索`pages`
-![image](../assets/jpeg/881666167204_.pic.jpg)
+![image](/assets/jpeg/881666167204_.pic.jpg)
 4. 选择`GitHub Pages Jeykll` 下的`Configure`
-![image](../assets/jpeg/891666167275_.pic.jpg)
+![image](/assets/jpeg/891666167275_.pic.jpg)
 5. 这时会跳转到如下页面：
-![image](../assets/jpeg/901666167311_.pic.jpg)
+![image](/assets/jpeg/901666167311_.pic.jpg)
 6. 更改这个代码，在第29行后加入：
 ```yaml
       - name: Setup Python
@@ -255,11 +255,11 @@ sudo mv   /Library/Ruby/Gems/2.6.0/gems/minima-2.5.1/_includes/header.html ./_in
       - name: Generate Tags
         run:  python make-tag.py
 ```
-![image](../assets/jpeg/911666167592_.pic.jpg)
+![image](/assets/jpeg/911666167592_.pic.jpg)
 然后保存并提交
 
 7. 进入项目的 GitHub配置页面，在`Pages`标签下，把`Build And Deployment`下的`Source`选项从`Branch`改成`GitHub Actions`。
-![image](../assets/jpeg/921666168419_.pic.jpg)
+![image](/assets/jpeg/921666168419_.pic.jpg)
 
 在这时，如果再有提交，就会运行我们新配置的action进行部署了。
 
@@ -278,9 +278,12 @@ sudo mv   /Library/Ruby/Gems/2.6.0/gems/minima-2.5.1/_includes/header.html ./_in
 5. 转义，解决花括号在 Jekyll 被识别成 Liquid 代码的问题 [https://blog.walterlv.com/post/jekyll/raw-in-jekyll.html](https://blog.walterlv.com/post/jekyll/raw-in-jekyll.html)
 
 6. GitHub Actions [https://docs.github.com/cn/actions](https://docs.github.com/cn/actions)
-## 关于老拐
+
 
 
 {% endraw %}
+
+
+ {%- include about.md -%}
 
 
