@@ -239,20 +239,45 @@ sudo mv   /Library/Ruby/Gems/2.6.0/gems/minima-2.5.1/_includes/header.html ./_in
 对于有强迫症的你，肯定是接受不了的，那么，我们可以把标签生成的工作交给`GitHub 的Action`来完成。
 
 具体方式：
+1. 先直接把tag目录干掉&commit
+2. 进入项目的`Action` 页面，选择`New Workflow`
+![image](../assets/jpeg/871666167187_.pic.jpg)
+3. 进入页面后，搜索`pages`
+![image](../assets/jpeg/881666167204_.pic.jpg)
+4. 选择`GitHub Pages Jeykll` 下的`Configure`
+![image](../assets/jpeg/891666167275_.pic.jpg)
+5. 这时会跳转到如下页面：
+![image](../assets/jpeg/901666167311_.pic.jpg)
+6. 更改这个代码，在第29行后加入：
+```yaml
+      - name: Setup Python
+        uses: actions/setup-python@v3
+      - name: Generate Tags
+        run:  python make-tag.py
+```
+![image](../assets/jpeg/911666167592_.pic.jpg)
+然后保存并提交
 
-1. 进入项目的 GitHub配置页面，在`Pages`标签下，把`Bui
+7. 进入项目的 GitHub配置页面，在`Pages`标签下，把`Build And Deployment`下的`Source`选项从`Branch`改成`GitHub Actions`。
+![image](../assets/jpeg/921666168419_.pic.jpg)
+
+在这时，如果再有提交，就会运行我们新配置的action进行部署了。
+
+到此为止，算是大功告成。
+
 ## 参考
 
-GitHub 官方文档 [https://docs.github.com/cn/pages](https://docs.github.com/cn/pages)
+1. GitHub 官方文档 [https://docs.github.com/cn/pages](https://docs.github.com/cn/pages)
 
-Jekyll官方文档 [https://jekyllrb.com/](https://jekyllrb.com/)
+2. Jekyll官方文档 [https://jekyllrb.com/](https://jekyllrb.com/)
 
-Long Qian : Jekyll Tags on Github Pages [https://longqian.me/2017/02/09/github-jekyll-tag/](https://longqian.me/2017/02/09/github-jekyll-tag/)
+3. Long Qian : Jekyll Tags on Github Pages [https://longqian.me/2017/02/09/github-jekyll-tag/](https://longqian.me/2017/02/09/github-jekyll-tag/)
 
-Jekyll的liquid脚本文档 [https://shopify.github.io/liquid/](https://shopify.github.io/liquid/)
+4. Jekyll的liquid脚本文档 [https://shopify.github.io/liquid/](https://shopify.github.io/liquid/)
 
+5. 转义，解决花括号在 Jekyll 被识别成 Liquid 代码的问题 [https://blog.walterlv.com/post/jekyll/raw-in-jekyll.html](https://blog.walterlv.com/post/jekyll/raw-in-jekyll.html)
 
-
+6. GitHub Actions [https://docs.github.com/cn/actions](https://docs.github.com/cn/actions)
 ## 关于老拐
 
 
