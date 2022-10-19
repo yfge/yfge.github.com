@@ -1,6 +1,6 @@
 ---
 title: openresty下lua代码覆盖率实现
-tags: openresty lua 自测 代码覆盖率
+tags: openresty lua 代码覆盖率
 date: 2019-01-29
 ---
 
