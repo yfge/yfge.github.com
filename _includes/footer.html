@@ -1,0 +1,17 @@
+<footer class="site-footer h-card" role="contentinfo">
+  <div class="wrapper footer-col-wrapper">
+    <div>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
+    <div class="footer-links">
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      {%- if site.github_username -%}
+      <span>·</span>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+      {%- endif -%}
+      {%- if site.email -%}
+      <span>·</span>
+      <a href="mailto:{{ site.email }}">Email</a>
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+

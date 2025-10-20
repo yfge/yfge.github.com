@@ -1,0 +1,16 @@
+"TalkReplay":
+  name: "TalkReplay"
+  url: "https://github.com/yfge/TalkReplay"
+  desc: "Replay, review, and share your AI chats (Claude/Codex). Import logs, browse timelines, tag highlights, and export—vibe-coding ready."
+"orion":
+  name: "orion"
+  url: "https://github.com/yfge/orion"
+  desc: "Orion is a unified notification gateway: it accepts notify requests from business systems, orchestrates routing, and delivers messages to multiple external channels (Feishu/Lark, WeCom, WeChat, email, SMS, MQ, etc.)."
+"open-tiny-orm":
+  name: "open-tiny-orm"
+  url: "https://github.com/yfge/open-tiny-orm"
+  desc: ""
+"ai-shifu":
+  name: "ai-shifu"
+  url: "https://github.com/ai-shifu/ai-shifu"
+  desc: "LLM-powered AI guide that leads and drives intelligent conversations"
