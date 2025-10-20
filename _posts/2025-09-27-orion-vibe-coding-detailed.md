@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AI 辅助完成的开源工程范本 —— Orion 项目背后的 vibe coding 实践（老拐版）"
-tags: AI,vibe-coding,开源,工程化,orion
+title: AI 辅助完成的开源工程范本 —— Orion 项目背后的 vibe coding 实践（老拐版）
+tags: AI vibe-coding 开源 工程化 orion
 ---
 
 
