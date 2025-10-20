@@ -12,7 +12,9 @@ layout: default
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+      <span id="busuanzi_container_page_pv"> • 阅读 <span id="busuanzi_value_page_pv"></span></span>
+    </p>
       <p>
         <span>[
           {% for tag in page.tags %}

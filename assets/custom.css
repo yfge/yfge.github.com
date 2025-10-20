@@ -198,6 +198,11 @@ a[href^="/tag/"] code {
   color: var(--text);
 }
 
+.site-footer .footer-links #busuanzi_container_site_uv,
+.site-footer .footer-links #busuanzi_container_site_pv {
+  color: var(--muted);
+}
+
 /* Small tweaks */
 .page-heading,
 .post-list-heading {
