@@ -12,23 +12,12 @@ layout: default
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}
-      <span id="busuanzi_container_page_pv"> • 阅读 <span id="busuanzi_value_page_pv"></span></span>
-    </p>
-      <p>
-        <span>[
-          {% for tag in page.tags %}
-            {% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{     tag_name }}</nobr></code>&nbsp;</a>
-          {% endfor %}
-        ]</span></p>
+      {%- endif -%}</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
-   
   </div>
-
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
@@ -36,3 +25,7 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+{%- if page.mermaid -%}
+  {%- include mermaid.html -%}
+{%- endif -%}
