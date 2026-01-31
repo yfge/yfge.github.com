@@ -148,13 +148,28 @@ pre,
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.8rem 1rem;
-  overflow: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre;
+  display: block;
+}
+
+/* Inline code */
 code {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   border-radius: 0.4rem;
   padding: 0.1rem 0.35rem;
+  font-size: 0.875em;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
