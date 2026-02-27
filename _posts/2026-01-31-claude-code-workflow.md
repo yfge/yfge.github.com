@@ -6,7 +6,7 @@ tags: [AI, vibe-coding, Claude Code, 工作流]
 
 # Claude Code 开发工作流：一套可复用的实战框架
 
-先说结论：**Claude Code 的工作流核心不是提示词，而是"可控交付"——每一步都能验收、每一步都能回退。**
+先说结论：Claude Code 的工作流核心就是"可控交付"——每一步都能验收、每一步都能回退。提示词是次要的。
 
 我用 Claude Code 做了几个完整项目（包括开源的 [Orion 通知网关](https://github.com/yfge/orion)、[ZhiForge 自动化工具](https://github.com/yfge/zhiforge)），总结了一套经过验证的工作流程。
 
@@ -16,7 +16,7 @@ tags: [AI, vibe-coding, Claude Code, 工作流]
 
 ## 核心理念：AI 是施工队，你是总工+质检员
 
-Claude Code 写代码很快，但最大的坑不是"不会写"，而是：
+Claude Code 写代码很快，但最大的坑是写完之后：
 
 - 写得太快
 - 改得太多
@@ -27,7 +27,7 @@ Claude Code 写代码很快，但最大的坑不是"不会写"，而是：
 
 ---
 
-## 第一步：Git 刹车系统（必备）
+## Git 刹车系统（必备）
 
 > 详见：[vibe-coding 九阳神功之夯：Git 基础操作](/2026/01/27/git/)
 
@@ -68,7 +68,7 @@ git branch -D feature/xxx
 
 ---
 
-## 第二步：项目规矩文件（让 AI 有章可循）
+## 项目规矩文件（让 AI 有章可循）
 
 Claude Code 会读取项目根目录的规矩文件。我建议至少准备：
 
@@ -97,7 +97,7 @@ Claude Code 会读取项目根目录的规矩文件。我建议至少准备：
 
 ---
 
-## 第三步：任务清单驱动（tasks.md）
+## 任务清单驱动（tasks.md）
 
 不要让 Claude Code 自由发挥。给它一个 `tasks.md`：
 
@@ -118,7 +118,7 @@ Claude Code 会读取项目根目录的规矩文件。我建议至少准备：
 
 ---
 
-## 第四步：可审计协作（agents_chat/）
+## 可审计协作（agents_chat/）
 
 > 详见：[AI 辅助完成的开源工程范本——Orion 项目背后的 vibe coding 实践](/2025/09/27/orion-vibe-coding-detailed/)
 
@@ -161,7 +161,7 @@ curl -X POST http://localhost:8080/api/users -d '{"name":"test"}'
 
 ---
 
-## 第五步：验收驱动（最关键）
+## 验收驱动（最关键）
 
 **AI 说"应该可以"不算，必须给命令/证据。**
 
