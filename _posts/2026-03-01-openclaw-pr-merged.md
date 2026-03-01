@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 我的 AI 助手帮我写了一个 PR，被 OpenClaw 合并了
+title: 用 AI 写代码给 OpenClaw 提 PR，合并了
 date: 2026-03-01
 tags: [AI, vibe-coding, OpenClaw, 开源]
 ---
