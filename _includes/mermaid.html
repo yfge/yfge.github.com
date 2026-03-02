@@ -1,6 +1,21 @@
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'dark',
+  themeVariables: {
+    darkMode: true,
+    background: '#131620',
+    primaryColor: '#1e2a40',
+    primaryTextColor: '#d4d9e4',
+    primaryBorderColor: '#4d8eff',
+    lineColor: '#4d8eff',
+    secondaryColor: '#1a2030',
+    tertiaryColor: '#151a28',
+    fontFamily: '-apple-system, "PingFang SC", "Noto Sans SC", sans-serif',
+    fontSize: '14px'
+  }
+});
 mermaid.run({
   querySelector: '.language-mermaid',
 });
