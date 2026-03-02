@@ -420,6 +420,41 @@ a[href^="/tag/"] code {
   transition: width 0.1s linear;
 }
 
+/* ---- Mermaid Diagrams ---- */
+.language-mermaid,
+pre.mermaid {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  text-align: center;
+}
+.language-mermaid svg {
+  max-width: 100%;
+}
+
+/* ---- Syntax Highlight (Rouge dark) ---- */
+.highlight .c, .highlight .c1, .highlight .cm { color: #5c6370; font-style: italic; }  /* comments */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp { color: #c678dd; }       /* keywords */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb { color: #98c379; }       /* strings */
+.highlight .na { color: #e5c07b; }                                                       /* attributes */
+.highlight .nf, .highlight .nb { color: #61afef; }                                      /* functions */
+.highlight .mi, .highlight .mf, .highlight .mh { color: #d19a66; }                      /* numbers */
+.highlight .o, .highlight .p { color: var(--text); }                                     /* operators */
+.highlight .nc, .highlight .nn { color: #e5c07b; }                                      /* class/module */
+.highlight .nl { color: #61afef; }                                                       /* labels */
+.highlight .nt { color: #e06c75; }                                                       /* tags (HTML) */
+.highlight .err { color: #e06c75; }                                                      /* errors */
+
+/* Line numbers */
+.highlight .lineno {
+  color: #3e4451;
+  padding-right: 0.8rem;
+  user-select: none;
+}
+
 /* ---- Mobile ---- */
 @media (max-width: 600px) {
   body { font-size: 15px; }

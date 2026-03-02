@@ -2,6 +2,7 @@
 layout: post
 title: "OpenClaw 断网自愈：我给 AI 助手写了个 VPN 看门狗"
 tags: [OpenClaw, VPN, 自动化, Mac mini]
+mermaid: true
 ---
 
 我的 Mac mini 上跑着三个 OpenClaw 实例。
@@ -54,7 +55,27 @@ OpenClaw 本身就依赖 VPN 才能调 API。VPN 断了，OpenClaw 也瘫了。
 
 ## 我怎么做的
 
-整体逻辑很简单，三步：
+整体逻辑很简单，看图：
+
+```mermaid
+flowchart TD
+    A[每5分钟触发] --> B{curl API 端点}
+    B -->|任一通| C[正常退出]
+    B -->|全不通| D[等3秒重试]
+    D -->|通了| C
+    D -->|还不通| E[切下一台服务器]
+    E --> F[重启 Jamjams]
+    F --> G{再检测}
+    G -->|通了| H[恢复成功]
+    G -->|还不通| I[强制刷新订阅列表]
+    I --> J[切另一台服务器]
+    J --> K[重启 Jamjams]
+    K --> L{最终检测}
+    L -->|通了| H
+    L -->|还不通| M[记日志等下一轮]
+```
+
+三步拆开说：
 
 **第一步：检测。**
 
