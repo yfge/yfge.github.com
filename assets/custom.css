@@ -237,18 +237,18 @@ blockquote {
 blockquote p:last-child { margin-bottom: 0; }
 
 /* ---- Code ---- */
-pre, .highlight {
-  background: var(--bg-elevated);
+pre, .highlight, .highlighter-rouge .highlight {
+  background: #0d1117 !important;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 8px;
   padding: 1rem 1.2rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 1.5rem 0;
 }
 
-pre code {
-  background: none;
+pre code, .highlight code {
+  background: none !important;
   border: none;
   padding: 0;
   border-radius: 0;
@@ -256,8 +256,19 @@ pre code {
   line-height: 1.7;
   white-space: pre;
   display: block;
-  color: var(--text);
+  color: #c9d1d9;
 }
+
+/* Override Jekyll/Rouge light theme */
+.highlight pre, .highlighter-rouge pre {
+  background: #0d1117 !important;
+  color: #c9d1d9;
+}
+
+/* Scrollbar for code blocks */
+pre::-webkit-scrollbar { height: 6px; }
+pre::-webkit-scrollbar-thumb { background: #3a3a55; border-radius: 3px; }
+pre::-webkit-scrollbar-track { background: transparent; }
 
 code {
   background: rgba(255, 255, 255, 0.06);
@@ -426,16 +437,19 @@ a[href^="/tag/"] code {
 /* ---- Mermaid Diagrams ---- */
 .language-mermaid,
 pre.mermaid {
-  background: var(--bg-elevated);
+  background: rgba(255, 255, 255, 0.02) !important;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 8px;
   padding: 1.5rem 1rem;
   margin: 1.5rem 0;
   overflow-x: auto;
   text-align: center;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .language-mermaid svg {
   max-width: 100%;
+  height: auto;
 }
 
 /* ---- Syntax Highlight (Rouge dark) ---- */
