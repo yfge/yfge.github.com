@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="reading-progress" id="reading-progress"></div>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -29,3 +30,14 @@ layout: default
 {%- if page.mermaid -%}
   {%- include mermaid.html -%}
 {%- endif -%}
+
+<script>
+(function(){
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
