@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我从不相信现成 SKILL，到整理出 Agent Harness Skills"
-date: 2026-05-28 20:00:00 +0800
+date: 2026-05-28 17:55:00 +0800
 tags: [AI Agent, Harness, Skill, 工程实践, vibe-coding]
 ---
 
